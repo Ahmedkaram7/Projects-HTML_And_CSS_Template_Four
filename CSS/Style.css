@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --main-transition: 0.3s;
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --fa-style-family-clssic: "Font Awesome 6 Free"
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+*:focus {
+    outline: none;
+}
+a {
+    text-decoration: none;
+    transition: var(--main-transition);
+}
+.page {
+    background-color: #f1f5f9;
+}
+.sidebar {
+    width: 250px;
+    box-shadow: 0 0 10px #ddd;
+    transition: var(--main-transition);
+    z-index: 1;
+}
+.sidebar > h4 {
+    letter-spacing: -2px;
+}
+@media (min-width:767px) {
+    .sidebar > h4::before,
+    .sidebar > h4::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+    }
+    .sidebar > h4::before {
+        width: 90px;
+        height: 2px;
+        bottom: -15px;
+    }
+    .sidebar > h4::after {
+        width: 15px;
+        height: 15px;
+        bottom: -21px;
+        border-radius: 50%;
+        border: 3px solid rgb(255, 255, 255);
+    }
+}
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #f6f6f6;
+}
+@media (max-width:767px) {
+    .sidebar {
+        width: 65px;
+        padding: 10px;
+    }
+    .sidebar > h4 {
+        font-size: 14px;
+    }
+    .sidebar ul li a span {
+        display: none;
+    }
+}
+.content .head {
+    padding: 15px;
+}
+.content .head form input[type="search"] {
+    border: 1px solid #ccc;
+    width: 160px;
+    transition: var(--main-transition);
+    color: black !important;
+}
+.content .head form input[type="search"]:focus {
+    width: 190px;
+}
+.content .head form input[type="search"]:focus::placeholder {
+    opacity: 0;
+}
+.content .head form svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 7px;
+}
+.content .head .icon img {
+    height: 40px;
+    width: 40px;
+}
+.content .head .icon span::before {
+    content: " ";
+    position: absolute;
+    left: 15px;
+    top: 3px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+.page .content .main-title {
+    letter-spacing: -1.5px;
+}
+.page .content .main-title::before,
+.page .content .main-title::after {
+    content: " ";
+    position: absolute;
+    left: 3px;
+    bottom: -12px;
+    height: 3px;
+    border-radius: 6px;
+}
+.page .content .main-title::before {
+    width: 130px;
+    background-color: white;
+}
+.page .content .main-title::after {
+    width: 50px;
+    background-color: rgb(0, 0, 0);
+}
+/* start Dashboard */
+.page .content .box .head {
+    background-color: #eee;
+    min-height: 137px;
+}
+.page .content .box .head img {
+    width: 200px;
+}
+@media (max-width:767px) {
+    .page .content .box .head img {
+        width: 130px;
+        margin-left: 30px;
+    }
+}
+.page .content .box .info::after,
+.page .content .box .info::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    left: 0;
+}
+.page .content .box .info::after {
+    top: 50px;
+}
+.page .content .box .info::before {
+    bottom: 100px;
+}
+.page .content .box .text img {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    left: 14px;
+    top: -33px;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #ddd;
+}
+.page .content .main-btn:hover {
+    color: white;
+    background-color: var(--blue-alt-color);
+}
+.page .content .box-2 form input[type="text"] {
+    background-color: #eee;
+}
+.page .content .box-2 form input[type="text"]::placeholder {
+    text-transform: capitalize;
+}
+.page .content .box-2 form textarea {
+    width: 100%;
+    height: 150px;
+    background-color: #eee;
+    resize: none;
+}
+.page .content .box-2 form textarea::placeholder {
+    text-transform: capitalize;
+}
+.page .content .box-shadow {
+    box-shadow: 0 0 10px #ddd;
+}
+/* Yearly Targets */
+.page .content .box-3 .target-row .icon {
+    width: 80px;
+    height: 80px;
+}
+@media (max-width:767px) {
+    .page .content .box-3 .target-row .icon {
+        width: 5 0px;
+        height: 50px;
+    }
+}
+.page .content .box-3 .blue .icon {
+    background-color: rgb(0 117 255 / 20%);
+}
+.page .content .box-3 .blue .icon svg {
+    color: var(--blue-alt-color);
+}
+.page .content .box-3 .orange .icon {
+    background-color: rgb(245 158 11 / 20%);
+}
+.page .content .box-3 .orange .icon svg {
+    color: var(--orange-color);
+}
+.page .content .box-3 .green .icon {
+    background-color: rgb(34 197 94 / 20%);
+}
+.page .content .box-3 .green .icon svg {
+    color: var(--green-color);
+}
+.page .content .box-3 .target-row .details {
+    flex: 1;
+}
+.page .content .box-3 .target-row .details .prg {
+    position: relative;
+    width: 100%;
+    height: 3px;
+}
+.page .content .box-3 .target-row .details .prg span {
+    position: absolute;
+    height: 3px;
+    left: 0;
+    top: 0;
+    display: block;
+}
+.page .content .box-3 .blue .details .prg {
+    background-color: rgba(15, 20, 26, 0.2);
+}
+.page .content .box-3 .blue .details .prg span {
+    background-color: var(--blue-color);
+}
+.page .content .box-3 .orange .details .prg {
+    background-color: rgb(245 158 11 / 20%);
+}
+.page .content .box-3 .orange .details .prg span {
+    background-color: var(--orange-color);
+}
+.page .content .box-3 .green .details .prg span {
+    background-color: var(--green-color);
+}
+.page .content .box-3 .target-row .details .prg span::before {
+    content: attr(data-prog);
+    position: absolute;
+    top: -34px;
+    right: -18px;
+    border-radius: 6px;
+    color: white;
+    padding: 2px 7px;
+    font-size: 11px;
+}
+.page .content .box-3 .blue .details .prg span::before {
+    background-color: var(--blue-color);
+}
+.page .content .box-3 .orange .details .prg span::before {
+    background-color: var(--orange-color);
+}
+.page .content .box-3 .green .details .prg span::before {
+    background-color: var(--green-color);
+}
+.page .content .box-3 .target-row .details .prg span::after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: -16px;
+    border: 6px solid;
+}
+.page .content .box-3 .blue .details .prg span::after {
+    border-color: var(--blue-color) transparent transparent transparent;
+}
+.page .content .box-3 .orange .details .prg span::after {
+    border-color: var(--orange-color) transparent transparent transparent;
+}
+.page .content .box-3 .green .details .prg span::after {
+    border-color: var(--green-color)transparent transparent transparent;
+}
+.page .content .box-4 .box {
+    border: 1px solid black;
+    border-radius: 6px;
+}
+.page .content .box-4 .orange svg {
+    color: var(--orange-color);
+}
+.page .content .box-4 .blue svg {
+    color: var(--blue-color);
+}
+.page .content .box-4 .green svg {
+    color: var(--green-color);
+}
+.page .content .box-4 .red svg {
+    color: var(--red-color);
+}
+.page .content .box-5 .section:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.page .content .box-5 .section img {
+    width: 100px !important;
+}
+.page .content .box-5 .section .day {
+    background-color: #eee;
+}
+@media (max-width:991px) {
+    .page .content .box-5 .section {
+        flex-direction: column;
+        text-align: center !important;
+    }
+    .page .content .box-5 .section img {
+        margin: 0 !important;
+        margin-bottom: 10px !important;
+    }
+    .page .content .box-5 .section p {
+        margin-bottom: 10px !important;
+    }
+}
+.page .content .box-6 .box:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+/* end Dashboard */
+/* start  settings */
+.toggle-checkbox {
+    --webkeit-appearance: none;
+    appearance: none;
+}
+.toggole-switch {
+    position: relative;
+    background-color: #ccc;
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+.toggole-switch::before {
+    font-family: var(--fa-style-family-clssic);
+    content: '\f00d';
+    width: 24px;
+    height: 24px;
+    font-weight: 900;
+    position: absolute;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: 4px;
+    top: 4px;
+    color: #aaa;
+    transition: var(--main-transition);
+}
+.toggle-checkbox:checked + .toggole-switch {
+    background-color: var(--blue-color);
+}
+.toggle-checkbox:checked + .toggole-switch::before {
+    left: 50px;
+    content: "\f00c";
+    color: var(--blue-color);
+}
+/* end  settings */
