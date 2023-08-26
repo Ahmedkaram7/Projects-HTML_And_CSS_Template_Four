@@ -93,16 +93,123 @@
                 </div>
                 <!-- end head -->
                 <!-- start  main  title page -->
-                <h1 class="main-title position-relative ms-4 mb-5 fw-bold w-fit ls-widest d-block text-capitalize">
+                <h1 class="main-title position-relative ms-4 mb-4 fw-bold w-fit ls-widest d-block text-capitalize">
                     settings</h1>
                 <!-- end  main  title page -->
 
-                <div class="settings-page">
+                <!-- <label>
+                        <input class="check-box" type="checkbox" checked>
+                        <div class="checked-swich"></div>
+                    </label> -->
+                <div class="settings-page p-3 ">
+                    <div class="row">
+                        <div class="colo-md-12 col-lg-6">
+                            <div class="box box-one bg-white rounded-3 p-3 text-capitalize mb-3">
+                                <h3 class="fw-bold text-black m-0 mb-2">Site Control </h3>
+                                <p class="m-0 mb-3 text-black-50">Control The Website If There Is Maintenance </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text">
+                                        <h3 class="fs-6 m-0 mb-2">Website Control </h3>
+                                        <p class="text-black-50 fs-13 m-0">open/Close Website and Type The Reason </p>
+                                    </div>
+                                    <div class="toggole">
+                                        <label>
+                                            <input class="check-box" type="checkbox" checked>
+                                            <div class="toggole-swich"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <textarea class="w-100 mt-3 p-2 text-black-50 fs-13 rounded-2 " placeholder="close message content"></textarea>
+                            </div>
+                        </div>
 
-                    <label>
-                        <input class="toggle-checkbox" type="checkbox" checked>
-                        <div class="toggole-switch"></div>
-                    </label>
+                        <div class="colo-md-12 col-lg-6">
+                            <div class="box box-two bg-white rounded-3 p-3 text-capitalize mb-3">
+                                <h3 class="fw-bold text-black m-0 mb-2 fs-3">General Info </h3>
+                                <p class="m-0 mb-3 text-black-50">General Information About Your Account </p>
+                                <form class=" text-black-50 ">
+                                    <label class="mb-2 fs-6" for="name">first name</label>
+                                    <input class=" w-100 mb-3 p-2 rounded-2 border-0" type="text" name="name" id="name" placeholder="first name">
+                                    <label class="mb-2 fs-6" for="last-name"> last name</label>
+                                    <input class=" w-100 mb-3 p-2 rounded-2 border-0" type="text" name="last-name" id="last-name" placeholder="last name">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-fill">
+                                            <label class="mb-2 fs-6" for="email">Email</label>
+                                            <input class=" w-100 mb-2 p-2 d-block rounded-2 border-0 " type="email" name="email" id="email" placeholder="ahmed@net.com" disabled>
+                                        </div>
+                                        <div>
+                                            <a class="btn main-btn bg-blue text-white ms-2 mt-4" href="#">change</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="colo-md-12 col-lg-6">
+                            <div class="box box-three bg-white rounded-3 p-3 text-capitalize mb-3">
+                                <h4 class="fw-bold text-black m-0 mb-2 ">General Info </h4>
+                                <p class="m-0 mb-3 text-black-50">General Information About Your Account </p>
+                                <div class="section d-flex justify-content-between align-items-center mb-3">
+                                    <div class="text">
+                                        <p class="fw-medium m-0 ">password</p>
+                                        <p class="text-black-50 mt-2 mb-2 fs-13">Last Change On 26/8/2023 </p>
+                                    </div>
+                                    <a class="btn main-btn bg-blue text-white fs-14" href="#">change</a>
+                                </div>
+                                <div class="section d-flex justify-content-between align-items-center mb-3">
+                                    <div class="text">
+                                        <p class="fw-medium m-0 ">Two-Factor Authentication</p>
+                                        <p class="text-black-50 mt-2 mb-2 fs-13">Enable/Disable The Feature </p>
+                                    </div>
+                                    <div class="toggole">
+                                        <label>
+                                            <input class="check-box" type="checkbox" checked>
+                                            <div class="toggole-swich"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="section d-flex justify-content-between align-items-center mb-3 p-md-0 pb-lg-4">
+                                    <div class="text">
+                                        <span class="fw-medium m-0 ">Two-Factor Authentication</span>
+                                        <p class="text-black-50 mt-2 mb-2 fs-13">Enable/Disable The Feature </p>
+                                    </div>
+                                    <a class=" btn-grany  text-black fs-14 rounded-2 p-2 ps-3 pe-3 " href="#">change</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="colo-md-12 col-lg-6">
+                            <div class="box box-four bg-white rounded-3 p-3 text-capitalize mb-3">
+                                <h3 class="fw-bold text-black m-0 mb-2 fs-3">Social Info</h3>
+                                <p class="m-0 mb-3 text-black-50 mb-4">Social Media Information </p>
+                                <form class=" text-black-50 mb-3">
+                                    <div class="social  d-flex ">
+                                        <i class="fa-brands fa-twitter rounded-start-2 border-end-0"></i>
+                                        <input class="Twitter d-inline-flex w-100 mb-3 ps-3 fs-13 p-3 rounded-end-2 border-0" type="text" name="Twitter" id="Twitter" placeholder="Twitter UserName">
+                                    </div>
+                                    <div class="social  d-flex">
+                                        <i class="fa-brands fa-facebook-f rounded-start-2 border-end-0"></i>
+                                        <input class="Twitter d-inline-flex w-100 mb-3 ps-3 fs-13 p-3 rounded-end-2 border-0" type="text" name="Fackbook" id="Fackbook" placeholder="Fackbook UserName">
+                                    </div>
+                                    <div class="social  d-flex">
+                                        <i class="fa-brands fa-linkedin rounded-start-2 border-end-0"></i>
+                                        <input class="Twitter d-inline-flex w-100 mb-3 ps-3 fs-13 p-3 rounded-end-2 border-0" type="text" name="Linkedin" id="Linkedin" placeholder="Linkedin UserName">
+                                    </div>
+                                    <div class="social  d-flex">
+                                        <i class="fa-brands fa-youtube rounded-start-2 border-end-0"></i>
+                                        <input class="Twitter d-inline-flex w-100 mb-3 ps-3 fs-13 p-3 rounded-end-2 border-0" type="text" name="Youtube" id="Youtube" placeholder="Youtube UserName">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
 
                 </div>
             </div>

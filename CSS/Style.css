@@ -327,41 +327,81 @@ a {
 }
 /* end Dashboard */
 /* start  settings */
-.toggle-checkbox {
-    --webkeit-appearance: none;
+.check-box {
+    --webkit-appearance: none;
     appearance: none;
 }
-.toggole-switch {
-    position: relative;
+.toggole-swich {
     background-color: #ccc;
     width: 78px;
     height: 32px;
     border-radius: 16px;
-    cursor: pointer;
+    position: relative;
+    transition: var(--main-transition);
 }
-.toggole-switch::before {
+.check-box + .toggole-swich::before {
     font-family: var(--fa-style-family-clssic);
-    content: '\f00d';
-    width: 24px;
-    height: 24px;
+    content: "\f00d";
     font-weight: 900;
     position: absolute;
+    width: 24px;
+    height: 24px;
     background-color: white;
+    color: #aaa;
+    left: 4px;
+    top: 4px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    left: 4px;
-    top: 4px;
-    color: #aaa;
     transition: var(--main-transition);
 }
-.toggle-checkbox:checked + .toggole-switch {
+.check-box:checked + .toggole-swich {
     background-color: var(--blue-color);
 }
-.toggle-checkbox:checked + .toggole-switch::before {
-    left: 50px;
+.check-box:checked + .toggole-swich::before {
     content: "\f00c";
     color: var(--blue-color);
+    left: 50px;
 }
-/* end  settings */
+.content .settings-page .box {
+    box-shadow: 0 0 10px #bbb8b8;
+}
+.content .settings-page .box-one textarea {
+    height: 170px;
+    resize: none;
+}
+.content .settings-page .box-two form input {
+    border: 1px solid #ccc !important;
+}
+.content .settings-page .box-two form input[type="email"] {
+    cursor: no-drop;
+}
+.content .settings-page .box-three .section:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+.content .settings-page .box-three .section .btn-grany {
+    background-color: #eee;
+}
+.content .settings-page .box-three .section .btn-grany:hover {
+    background-color: #ccc;
+}
+.content .settings-page .box-four form input[type="text"] {
+    background-color: #eee;
+    border: 1px solid #ccc !important;
+    position: relative;
+}
+.content .settings-page .box-four form .social i {
+    width: 40px;
+    background-color: #eee;
+    height: 48.94px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+.content .settings-page .box-four form input[type="text"]:focus .social i {
+    color: red;
+}
